@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}DB | Configuración{% endblock %}
+{% block h1 %}DB (ORM + SQLite){% endblock %}
+
+{% block content %}
+  <div class="card">
+    <p><strong>Total registros:</strong> <code>{{ total }}</code></p>
+    <p class="muted">Se crea 1 registro por visita a <code>/db/</code>.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Últimos 10</h3>
+
+    {% if registros %}
+      <ul>
+        {% for r in registros %}
+          <li>
+            <strong>{{ r.origen }}</strong>
+            <span class="muted">— {{ r.creado_en }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="muted">Aún no hay registros.</p>
+    {% endif %}
+  </div>
+{% endblock %}

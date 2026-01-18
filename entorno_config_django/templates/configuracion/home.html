@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio | Configuración{% endblock %}
+{% block h1 %}Inicio{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <p><strong>{{ titulo }}</strong></p>
+    <p class="muted">Rutas:</p>
+    <ul>
+      <li><code>/entorno/</code></li>
+      <li><code>/db/</code></li>
+    </ul>
+  </div>
+{% endblock %}

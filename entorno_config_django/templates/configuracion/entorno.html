@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Entorno | Configuración{% endblock %}
+{% block h1 %}Entorno{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <p><strong>DEBUG (persistido en DB):</strong> <code>{{ debug }}</code></p>
+    <p><strong>ALLOWED_HOSTS (texto demo):</strong> <code>{{ allowed_hosts }}</code></p>
+    <p><strong>Versión app:</strong> <code>{{ version_app }}</code></p>
+  </div>
+
+  <div class="card">
+    <p class="muted">
+      Nota: esta página lee una configuración simple desde el modelo <code>AppSetting</code>.
+    </p>
+  </div>
+{% endblock %}

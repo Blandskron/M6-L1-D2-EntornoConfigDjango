@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{% block title %}Django Config{% endblock %}</title>
+
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; }
+      header, main { max-width: 980px; margin: 0 auto; padding: 16px; }
+      header { border-bottom: 1px solid #e5e7eb; }
+      nav a { margin-right: 12px; text-decoration: none; }
+      code, pre { background: #f3f4f6; padding: 2px 6px; border-radius: 6px; }
+      .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; margin: 12px 0; }
+      .muted { color: #6b7280; }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="muted">Aplicación 2 — Entorno, configuración y buenas prácticas</div>
+      <h1 style="margin: 8px 0;">{% block h1 %}Django Config{% endblock %}</h1>
+
+      <nav>
+        <a href="{% url 'configuracion:home' %}">Inicio</a>
+        <a href="{% url 'configuracion:entorno' %}">Entorno</a>
+        <a href="{% url 'configuracion:db' %}">DB</a>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
